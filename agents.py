@@ -489,7 +489,7 @@ class XYEnvironment(Environment):
         if radius is None:
             radius = self.perceptible_distance
         radius2 = radius * radius
-        return [(thing, radius2 - distance_squared(location, thing.location))
+        return [(thing, distance_squared(location, thing.location))
                 for thing in self.things if distance_squared(
                 location, thing.location) <= radius2]
 
